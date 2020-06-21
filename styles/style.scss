@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+@import "hamburguer_menu";
+@import 'theme';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 18px;
+  color: $color-darkBlue;
+}
+
+nav {
+  position: relative;
+  padding: 1.25rem 1.25rem;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  &#nav-mobile {
+    display: flex;
+    #menuToggle {
+      @include menuToggle;
+    }
+    #menu {
+      @include menu;
+    }
+  }
+  &#nav-desktop {display: none;}
+}
+
+
+@media screen and (min-width: 600px) {
+  #nav-mobile {display: none;}
+  #nav-desktop {display: flex;}
+}

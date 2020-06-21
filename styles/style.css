@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 18px;
+  color: #2d314d;
+}
+
+nav {
+  position: relative;
+  padding: 1.25rem 1.25rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+nav#nav-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav#nav-mobile #menuToggle {
+  display: block;
+  position: relative;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+}
+
+nav#nav-mobile #menuToggle input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+nav#nav-mobile #menuToggle input:checked ~ span {
+  opacity: 1;
+  -webkit-transform: translateY(-2.5px) rotate(45deg);
+          transform: translateY(-2.5px) rotate(45deg);
+}
+
+nav#nav-mobile #menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+nav#nav-mobile #menuToggle input:checked ~ span:nth-last-child(2) {
+  -webkit-transform: translateY(2.5px) rotate(-45deg);
+          transform: translateY(2.5px) rotate(-45deg);
+}
+
+nav#nav-mobile #menuToggle input:checked ~ ul {
+  -webkit-transform: none;
+          transform: none;
+}
+
+nav#nav-mobile #menuToggle span {
+  display: block;
+  width: 2rem;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #9698a6;
+  border-radius: 3px;
+  z-index: 1;
+  -webkit-transform-origin: 4px 0px;
+          transform-origin: 4px 0px;
+  -webkit-transition: opacity 0.55s ease, -webkit-transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: opacity 0.55s ease, -webkit-transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+nav#nav-mobile #menuToggle span:first-child {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+nav#nav-mobile #menuToggle span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+nav#nav-mobile #menu {
+  position: absolute;
+  width: 85vw;
+  max-width: 400px;
+  margin: 3rem calc(-100vw + 5rem);
+  padding: 1.5rem 0;
+  border-radius: 0.25rem;
+  z-index: 1;
+  background-color: white;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: translate(0, -150%);
+          transform: translate(0, -150%);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+nav#nav-mobile #menu li {
+  text-align: center;
+  padding: 0.75rem;
+}
+
+nav#nav-mobile #menu li:hover {
+  background-color: #fafafa;
+}
+
+nav#nav-mobile #menu li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav#nav-desktop {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  #nav-mobile {
+    display: none;
+  }
+  #nav-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,97 @@
+@import 'theme';
+
+$hamburguer-size: 2rem;
+$hamburguer-color: #2D314D;
+
+@mixin menuToggle {
+  display: block;
+  position: relative;
+
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
+
+  input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  
+    cursor: pointer;
+  
+    opacity: 0;
+    z-index: 2;
+  
+    -webkit-touch-callout: none;
+    &:checked ~ span {
+      opacity: 1;
+      transform: translateY(-2.5px) rotate(45deg);
+      &:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+      }
+      &:nth-last-child(2) {
+        transform: translateY(2.5px) rotate(-45deg);
+      }
+    }
+    &:checked ~ ul {
+      transform: none;
+    }
+  }
+  span {
+    display: block;
+    width: $hamburguer-size;
+    height: 2px;
+    margin-bottom: 5px;
+    position: relative;
+  
+    background: $color-grayishBlue;
+    border-radius: 3px;
+  
+    z-index: 1;
+  
+    transform-origin: 4px 0px;
+  
+    transition: 
+      transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      opacity 0.55s ease;
+    &:first-child {
+      transform-origin: 0% 0%;
+    }
+    &:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+  }
+}
+
+@mixin menu {
+  position: absolute;
+  width: 85vw;
+  max-width: 400px;
+  margin: 3rem calc(-100vw + 5rem);
+  padding: 1.5rem 0;
+  border-radius: 0.25rem;
+  z-index: 1;
+
+  background-color: $color-white;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(0, -150%);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  li {
+    text-align: center;
+    padding: 0.75rem;
+    &:hover {
+      background-color: $color-veryLightGray;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
