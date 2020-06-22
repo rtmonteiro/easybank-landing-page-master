@@ -13,7 +13,9 @@ body {
 }
 
 nav {
-  position: relative;
+  width: 100vw;
+  position: fixed;
+  background-color: white;
   padding: 1.25rem 1.25rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -21,9 +23,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 2;
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  z-index: 3;
 }
 
 nav#nav-mobile {
@@ -35,7 +35,7 @@ nav#nav-mobile {
 nav#nav-mobile #menuToggle {
   display: block;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
    -ms-user-select: none;
@@ -49,14 +49,14 @@ nav#nav-mobile #menuToggle input {
   position: absolute;
   cursor: pointer;
   opacity: 0;
-  z-index: 2;
+  z-index: 5;
   -webkit-touch-callout: none;
 }
 
 nav#nav-mobile #menuToggle input:checked ~ span {
   opacity: 1;
-  -webkit-transform: translateY(-2.5px) rotate(45deg);
-          transform: translateY(-2.5px) rotate(45deg);
+  -webkit-transform: translateY(6.5px) rotate(45deg);
+          transform: translateY(6.5px) rotate(45deg);
 }
 
 nav#nav-mobile #menuToggle input:checked ~ span:nth-last-child(3) {
@@ -66,13 +66,17 @@ nav#nav-mobile #menuToggle input:checked ~ span:nth-last-child(3) {
 }
 
 nav#nav-mobile #menuToggle input:checked ~ span:nth-last-child(2) {
-  -webkit-transform: translateY(2.5px) rotate(-45deg);
-          transform: translateY(2.5px) rotate(-45deg);
+  -webkit-transform: translateY(calc(-1 * 6.5px)) rotate(-45deg);
+          transform: translateY(calc(-1 * 6.5px)) rotate(-45deg);
 }
 
 nav#nav-mobile #menuToggle input:checked ~ ul {
   -webkit-transform: none;
           transform: none;
+}
+
+nav#nav-mobile #menuToggle input:checked ~ #curtain {
+  opacity: 1;
 }
 
 nav#nav-mobile #menuToggle span {
@@ -83,23 +87,27 @@ nav#nav-mobile #menuToggle span {
   position: relative;
   background: #9698a6;
   border-radius: 3px;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  z-index: 4;
+  -webkit-transition: opacity 0.4s ease, -webkit-transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: opacity 0.4s ease, -webkit-transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.4s ease;
+  transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.4s ease, -webkit-transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+nav#nav-mobile #menuToggle #curtain {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
   z-index: 1;
-  -webkit-transform-origin: 4px 0px;
-          transform-origin: 4px 0px;
-  -webkit-transition: opacity 0.55s ease, -webkit-transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: opacity 0.55s ease, -webkit-transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-  transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
-}
-
-nav#nav-mobile #menuToggle span:first-child {
-  -webkit-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
-}
-
-nav#nav-mobile #menuToggle span:nth-last-child(2) {
-  -webkit-transform-origin: 0% 100%;
-          transform-origin: 0% 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: 400ms opacity ease;
+  transition: 400ms opacity ease;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(45, 49, 77, 0.7)), to(rgba(0, 0, 0, 0.1)));
+  background: linear-gradient(to bottom, rgba(45, 49, 77, 0.7), rgba(0, 0, 0, 0.1));
 }
 
 nav#nav-mobile #menu {
@@ -109,7 +117,7 @@ nav#nav-mobile #menu {
   margin: 3rem calc(-100vw + 5rem);
   padding: 1.5rem 0;
   border-radius: 0.25rem;
-  z-index: 1;
+  z-index: 4;
   background-color: white;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
@@ -142,11 +150,25 @@ nav#nav-desktop {
   display: none;
 }
 
+#curtain {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: 400ms opacity ease;
+  transition: 400ms opacity ease;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(45, 49, 77, 0.7)), to(rgba(0, 0, 0, 0.1)));
+  background: linear-gradient(to bottom, rgba(45, 49, 77, 0.7), rgba(0, 0, 0, 0.1));
+}
+
 @media screen and (min-width: 600px) {
-  #nav-mobile {
+  nav#nav-mobile {
     display: none;
   }
-  #nav-desktop {
+  nav#nav-desktop {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
