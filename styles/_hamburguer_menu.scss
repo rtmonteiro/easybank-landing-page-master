@@ -5,7 +5,7 @@ $hamburguer-color: #2D314D;
 
 @mixin menuToggle {
   display: block;
-  position: relative;
+  // position: relative;
 
   z-index: 0;
 
@@ -14,9 +14,9 @@ $hamburguer-color: #2D314D;
 
   input {
     display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    width: $hamburguer-size;
+    height: calc(3*(2px + 5px));
+    position: absolute; 
   
     cursor: pointer;
   
@@ -64,9 +64,12 @@ $hamburguer-color: #2D314D;
 
 @mixin menu {
   position: absolute;
+  left: 7.5vw;
   width: 85vw;
-  max-width: 400px;
-  margin: 3rem calc(-100vw + 5rem);
+  // min-width: 320px;
+  // max-width: 400px;
+  // margin: 3rem calc(-100vw + 5rem);
+  margin: 3rem 0;
   padding: 1.5rem 0;
   border-radius: 0.25rem;
   z-index: 4;
