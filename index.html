@@ -55,12 +55,16 @@
       <a class="button" href="/">Request Invite</a>
     </nav>
   </div>
-  Next generation digital banking
+  <header>
+    <img src="images/image-mockups.png" alt="header background desktop">
+    <h1>Next generation digital banking</h1>
+    <p>
+      Take your financial life online. Your Easybank account will be a one-stop-shop 
+      for spending, saving, budgeting, investing, and much more.
+    </p>
+    <a class="button" href="/">Request Invite</a>
+  </header>
 
-  Take your financial life online. Your Easybank account will be a one-stop-shop 
-  for spending, saving, budgeting, investing, and much more.
-
-  Request Invite
 
 
 
@@ -131,9 +135,13 @@
 
     function toggleCurtain(input) {
       if (input.checked) {
+        curtain.style.display = 'block';
         curtain.style.opacity = 1;
       } else {
         curtain.style.opacity = 0;
+        setTimeout(() => {
+          curtain.style.display = 'none';
+        }, 150);
       }
     }
   </script>

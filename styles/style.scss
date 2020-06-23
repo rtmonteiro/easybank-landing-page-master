@@ -36,6 +36,7 @@ nav {
 }
 
 #curtain {
+  display: none;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -44,7 +45,7 @@ nav {
   left: 0;
   opacity: 0;
   transition: 400ms opacity ease;
-  background: linear-gradient(to bottom, rgba($color-darkBlue, 0.7), rgba(0,0,0,0.1));
+  background: linear-gradient(to bottom, rgba($color-darkBlue, 1), rgba(0,0,0,0.1));
 }
 
 .container {
@@ -60,6 +61,37 @@ nav {
   background: $gradient-green2blue;
   &:hover {
     background: $gradient-green2blueLight;
+  }
+}
+
+header {
+  padding-bottom: 6rem;
+  background-image: url('../images/bg-intro-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  text-align: center;
+  img {
+    margin-top: -3rem;
+    width: 90%;
+  }
+  h1 {
+    margin: 2rem auto;
+    font-weight: $fontWeight-thin;
+    font-size: 2.5rem;
+  }
+  p {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2.5rem;
+    color: $color-grayishBlue;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+  .button {
+    padding: 0.8rem 1.75rem;
+    font-size: 1rem;
+    color: $color-veryLightGray;
   }
 }
 

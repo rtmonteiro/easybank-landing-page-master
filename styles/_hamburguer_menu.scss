@@ -64,20 +64,16 @@ $hamburguer-color: #2D314D;
 
 @mixin menu {
   position: absolute;
-  left: 7.5vw;
   width: 85vw;
-  // min-width: 320px;
-  // max-width: 400px;
-  // margin: 3rem calc(-100vw + 5rem);
-  margin: 3rem 0;
+  left: calc((100vw - 85vw) / 2);
+  margin-top: 3rem;
   padding: 1.5rem 0;
   border-radius: 0.25rem;
   z-index: 4;
 
   background-color: $color-white;
   list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
+  -webkit-font-smoothing: antialiased; /* to stop flickering of text in safari */
 
   transform-origin: 0% 0%;
   transform: translate(0, -150%);

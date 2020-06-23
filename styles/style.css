@@ -93,9 +93,9 @@ nav#nav-mobile #menuToggle span {
 
 nav#nav-mobile #menu {
   position: absolute;
-  left: 7.5vw;
   width: 85vw;
-  margin: 3rem 0;
+  left: calc((100vw - 85vw) / 2);
+  margin-top: 3rem;
   padding: 1.5rem 0;
   border-radius: 0.25rem;
   z-index: 4;
@@ -132,6 +132,7 @@ nav#nav-desktop {
 }
 
 #curtain {
+  display: none;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -141,8 +142,8 @@ nav#nav-desktop {
   opacity: 0;
   -webkit-transition: 400ms opacity ease;
   transition: 400ms opacity ease;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(45, 49, 77, 0.7)), to(rgba(0, 0, 0, 0.1)));
-  background: linear-gradient(to bottom, rgba(45, 49, 77, 0.7), rgba(0, 0, 0, 0.1));
+  background: -webkit-gradient(linear, left top, left bottom, from(#2d314d), to(rgba(0, 0, 0, 0.1)));
+  background: linear-gradient(to bottom, #2d314d, rgba(0, 0, 0, 0.1));
 }
 
 .container {
@@ -162,6 +163,41 @@ nav#nav-desktop {
 .button:hover {
   background: -webkit-gradient(linear, left top, right top, from(#85e59f), to(#81d4e9));
   background: linear-gradient(to right, #85e59f, #81d4e9);
+}
+
+header {
+  padding-bottom: 6rem;
+  background-image: url("../images/bg-intro-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  text-align: center;
+}
+
+header img {
+  margin-top: -3rem;
+  width: 90%;
+}
+
+header h1 {
+  margin: 2rem auto;
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+header p {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 2.5rem;
+  color: #9698a6;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+header .button {
+  padding: 0.8rem 1.75rem;
+  font-size: 1rem;
+  color: #fafafa;
 }
 
 @media screen and (min-width: 900px) {
