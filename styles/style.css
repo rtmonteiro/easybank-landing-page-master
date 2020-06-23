@@ -75,10 +75,6 @@ nav#nav-mobile #menuToggle input:checked ~ ul {
           transform: none;
 }
 
-nav#nav-mobile #menuToggle input:checked ~ #curtain {
-  opacity: 1;
-}
-
 nav#nav-mobile #menuToggle span {
   display: block;
   width: 2rem;
@@ -94,20 +90,6 @@ nav#nav-mobile #menuToggle span {
   transition: opacity 0.4s ease, -webkit-transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.4s ease;
   transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.4s ease, -webkit-transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
-}
-
-nav#nav-mobile #menuToggle #curtain {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  -webkit-transition: 400ms opacity ease;
-  transition: 400ms opacity ease;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(45, 49, 77, 0.7)), to(rgba(0, 0, 0, 0.1)));
-  background: linear-gradient(to bottom, rgba(45, 49, 77, 0.7), rgba(0, 0, 0, 0.1));
 }
 
 nav#nav-mobile #menu {
@@ -164,14 +146,75 @@ nav#nav-desktop {
   background: linear-gradient(to bottom, rgba(45, 49, 77, 0.7), rgba(0, 0, 0, 0.1));
 }
 
-@media screen and (min-width: 600px) {
+.container {
+  width: 100%;
+}
+
+.button {
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background: linear-gradient(to right, #31d35c, #2bb7da);
+}
+
+.button:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#85e59f), to(#81d4e9));
+  background: linear-gradient(to right, #85e59f, #81d4e9);
+}
+
+@media screen and (min-width: 900px) {
   nav#nav-mobile {
     display: none;
   }
   nav#nav-desktop {
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin: auto;
+  }
+  nav#nav-desktop ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav#nav-desktop ul li {
+    position: relative;
+  }
+  nav#nav-desktop ul li::after {
+    content: '';
+    opacity: 0;
+    -webkit-transition: all 150ms ease;
+    transition: all 150ms ease;
+  }
+  nav#nav-desktop ul li:hover::after {
+    content: '';
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    opacity: 1;
+    background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+    background: linear-gradient(to right, #31d35c, #2bb7da);
+  }
+  nav#nav-desktop ul li a {
+    text-decoration: none;
+    color: #9698a6;
+    -webkit-transition: color 150ms ease;
+    transition: color 150ms ease;
+  }
+  nav#nav-desktop ul li a:hover {
+    color: #2d314d;
+  }
+  nav#nav-desktop ul li + li {
+    margin-left: 1.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
 @import "hamburguer_menu";
+@import "theme";
 
 * {
   margin: 0;
@@ -46,13 +47,65 @@ nav {
   background: linear-gradient(to bottom, rgba($color-darkBlue, 0.7), rgba(0,0,0,0.1));
 }
 
+.container {
+  width: 100%;
+}
 
-@media screen and (min-width: 600px) {
+.button {
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  text-decoration: none;
+  color: $color-white;
+  font-weight: $fontWeight-bold;
+  background: $gradient-green2blue;
+  &:hover {
+    background: $gradient-green2blueLight;
+  }
+}
+
+@media screen and (min-width: 900px) {
   nav {
     &#nav-mobile {display: none;}
     &#nav-desktop {
+      width: 90%;
+      max-width: 1200px;
+      position: relative;
       display: flex;
-      
+      margin: auto;
+      ul {
+        list-style: none;
+        display: flex;
+        li {
+          position: relative;
+          &::after {
+            content: '';
+            opacity: 0;
+            transition: all 150ms ease;
+          }
+          &:hover::after {
+            content: '';
+            position: absolute;
+            top: 3.5rem;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            opacity: 1;
+            background: $gradient-green2blue;
+          }
+          a {
+            text-decoration: none;
+            color: $color-grayishBlue;
+            transition: color 150ms ease;
+            &:hover {
+              color: $color-darkBlue;
+            }
+          }
+
+          & + li {
+            margin-left: 1.5rem;
+          }
+        }
+      }
     }
   }
 }
