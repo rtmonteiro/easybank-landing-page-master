@@ -36,13 +36,13 @@ nav {
 }
 
 #curtain {
-  display: none;
   width: 100vw;
   height: 100vh;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
+  pointer-events: none;
   opacity: 0;
   transition: 400ms opacity ease;
   background: linear-gradient(to bottom, rgba($color-darkBlue, 1), rgba(0,0,0,0.1));
@@ -92,6 +92,44 @@ header {
     padding: 0.8rem 1.75rem;
     font-size: 1rem;
     color: $color-veryLightGray;
+  }
+}
+
+section {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  background-color: $color-lightGrayishBlue;
+  h2 {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    font-weight: $fontWeight-regular;
+  }
+  p {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 3rem;
+    color: $color-grayishBlue;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+}
+
+.choices {
+  margin-bottom: 1.25rem;
+  img {
+    margin-bottom: 1rem;
+  }
+  h3 {
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    font-weight: $fontWeight-regular;
+  }
+  p {
+    width: 85%;
+    margin: auto;
   }
 }
 

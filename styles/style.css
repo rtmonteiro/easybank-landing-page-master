@@ -132,13 +132,13 @@ nav#nav-desktop {
 }
 
 #curtain {
-  display: none;
   width: 100vw;
   height: 100vh;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
+  pointer-events: none;
   opacity: 0;
   -webkit-transition: 400ms opacity ease;
   transition: 400ms opacity ease;
@@ -198,6 +198,49 @@ header .button {
   padding: 0.8rem 1.75rem;
   font-size: 1rem;
   color: #fafafa;
+}
+
+section {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  background-color: #f3f4f6;
+}
+
+section h2 {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+section p {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 3rem;
+  color: #9698a6;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+.choices {
+  margin-bottom: 1.25rem;
+}
+
+.choices img {
+  margin-bottom: 1rem;
+}
+
+.choices h3 {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.choices p {
+  width: 85%;
+  margin: auto;
 }
 
 @media screen and (min-width: 900px) {
