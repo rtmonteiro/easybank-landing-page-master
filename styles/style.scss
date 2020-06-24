@@ -98,8 +98,19 @@ header {
 section {
   padding-top: 4rem;
   padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  background-color: $color-lightGrayishBlue;
+  &#why {
+    background-color: $color-lightGrayishBlue;
+  }
+  &#blog {
+    background-color: $color-veryLightGray;
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
   h2 {
     width: 60%;
     margin: auto;
@@ -130,6 +141,45 @@ section {
   p {
     width: 85%;
     margin: auto;
+  }
+}
+
+.article {
+  max-width: 400px;
+  margin: 0 2rem;
+  background-color: $color-white;
+  border-radius: 5px;
+  overflow: hidden;
+  & + .article {
+    margin-top: 1.5rem;
+  }
+  img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+  }
+  .article-content {
+    width: 100%;
+    padding: 1.75rem;
+    text-align: left;
+  }
+  .article-author {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    float: left;
+    text-align: left;
+    font-size: 0.625rem;
+  }
+  h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: $fontWeight-regular;
+  }
+  .article-description {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.125rem;
   }
 }
 
