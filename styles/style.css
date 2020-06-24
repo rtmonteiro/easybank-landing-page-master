@@ -311,7 +311,9 @@ section p {
 }
 
 footer {
+  position: relative;
   padding: 3rem;
+  padding-bottom: 5rem;
   background-color: #2d314d;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -189,7 +189,9 @@ section {
 }
 
 footer {
+  position: relative;
   padding: 3rem;
+  padding-bottom: 5rem;
   background-color: $color-darkBlue;
   display: flex;
   flex-direction: column;

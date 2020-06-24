@@ -15,9 +15,14 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      padding: 0.5rem 1rem;
+      border-radius: 10px 10px 0 0;
+      background-color: white;
       font-size: 11px;
       text-align: center;
-      margin-bottom: 0.5rem;
     }
 
     .attribution a {
@@ -183,13 +188,13 @@
     </nav>
     <a href="/" class="button">Request Invite</a>
     <p id="trademark">© Easybank. All Rights Reserved</p>
+    <div class="attribution">
+      Coded with ❤ by <a href="https://github.com/rtmonteiro/">Ryan Monteiro</a>.
+      <br>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    </div>
   </footer>
 
-  <div class="attribution">
-    Coded with ❤ by <a href="https://github.com/rtmonteiro/">Ryan Monteiro</a>.
-    <br>
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-  </div>
   <script>
     const curtain = document.querySelector('#curtain');
 
