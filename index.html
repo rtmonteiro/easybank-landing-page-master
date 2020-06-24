@@ -17,6 +17,7 @@
     .attribution {
       font-size: 11px;
       text-align: center;
+      margin-bottom: 0.5rem;
     }
 
     .attribution a {
@@ -26,7 +27,7 @@
 </head>
 
 <body>
-  <nav id="nav-mobile">
+  <nav class="navbar" id="nav-mobile">
     <a href="/">
       <img src="images/logo.svg" alt="easybank logo">
     </a>
@@ -50,7 +51,7 @@
   </nav>
   <div id="curtain"></div>
   <div class="container">
-    <nav id="nav-desktop">
+    <nav class="navbar" id="nav-desktop">
       <a href="/">
         <img src="images/logo.svg" alt="easybank logo">
       </a>
@@ -160,30 +161,34 @@
       </div>
     </div>
   </section>
-  
-  
-  
 
-  
-  
-  
-
-
-
-  About Us
-  Contact
-  Blog
-  Careers
-  Support
-  Privacy Policy
-
-  Request Invite
-
-  © Easybank. All Rights Reserved
+  <footer>
+    <a class="logo" href="/"><img src="images/logo-white.svg" alt="easybank logo"></a>
+    <div class="social">
+      <a href="/"><img src="images/icon-facebook.svg" alt="facebook page link"></a>
+      <a href="/"><img src="images/icon-youtube.svg" alt="youtube page link"></a>
+      <a href="/"><img src="images/icon-twitter.svg" alt="twitter page link"></a>
+      <a href="/"><img src="images/icon-pinterest.svg" alt="pinterest page link"></a>
+      <a href="/"><img src="images/icon-instagram.svg" alt="instagram page link"></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/">About Us</a></li>
+        <li><a href="/">Contact</a></li>
+        <li><a href="/">Blog</a></li>
+        <li><a href="/">Careers</a></li>
+        <li><a href="/">Support</a></li>
+        <li><a href="/">Privacy Policy</a></li>
+      </ul>
+    </nav>
+    <a href="/" class="button">Request Invite</a>
+    <p id="trademark">© Easybank. All Rights Reserved</p>
+  </footer>
 
   <div class="attribution">
+    Coded with ❤ by <a href="https://github.com/rtmonteiro/">Ryan Monteiro</a>.
+    <br>
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="/">Your Name Here</a>.
   </div>
   <script>
     const curtain = document.querySelector('#curtain');

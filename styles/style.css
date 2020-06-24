@@ -12,11 +12,16 @@ body {
   color: #2d314d;
 }
 
-nav {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
   width: 100vw;
   position: fixed;
   background-color: white;
-  padding: 1.25rem 1.25rem;
+  padding: 1.25rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -26,13 +31,13 @@ nav {
   z-index: 3;
 }
 
-nav#nav-mobile {
+.navbar#nav-mobile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-nav#nav-mobile #menuToggle {
+.navbar#nav-mobile #menuToggle {
   display: block;
   z-index: 0;
   -webkit-user-select: none;
@@ -41,7 +46,7 @@ nav#nav-mobile #menuToggle {
        user-select: none;
 }
 
-nav#nav-mobile #menuToggle input {
+.navbar#nav-mobile #menuToggle input {
   display: block;
   width: 2rem;
   height: calc(3*(2px + 5px));
@@ -52,29 +57,29 @@ nav#nav-mobile #menuToggle input {
   -webkit-touch-callout: none;
 }
 
-nav#nav-mobile #menuToggle input:checked ~ span {
+.navbar#nav-mobile #menuToggle input:checked ~ span {
   opacity: 1;
   -webkit-transform: translateY(6.5px) rotate(45deg);
           transform: translateY(6.5px) rotate(45deg);
 }
 
-nav#nav-mobile #menuToggle input:checked ~ span:nth-last-child(3) {
+.navbar#nav-mobile #menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   -webkit-transform: rotate(0deg) scale(0.2, 0.2);
           transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-nav#nav-mobile #menuToggle input:checked ~ span:nth-last-child(2) {
+.navbar#nav-mobile #menuToggle input:checked ~ span:nth-last-child(2) {
   -webkit-transform: translateY(calc(-1 * 6.5px)) rotate(-45deg);
           transform: translateY(calc(-1 * 6.5px)) rotate(-45deg);
 }
 
-nav#nav-mobile #menuToggle input:checked ~ ul {
+.navbar#nav-mobile #menuToggle input:checked ~ ul {
   -webkit-transform: none;
           transform: none;
 }
 
-nav#nav-mobile #menuToggle span {
+.navbar#nav-mobile #menuToggle span {
   display: block;
   width: 2rem;
   height: 2px;
@@ -91,7 +96,7 @@ nav#nav-mobile #menuToggle span {
   transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.4s ease, -webkit-transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-nav#nav-mobile #menu {
+.navbar#nav-mobile #menu {
   position: absolute;
   width: 85vw;
   left: calc((100vw - 85vw) / 2);
@@ -113,21 +118,16 @@ nav#nav-mobile #menu {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-nav#nav-mobile #menu li {
+.navbar#nav-mobile #menu li {
   text-align: center;
   padding: 0.75rem;
 }
 
-nav#nav-mobile #menu li:hover {
+.navbar#nav-mobile #menu li:hover {
   background-color: #fafafa;
 }
 
-nav#nav-mobile #menu li a {
-  text-decoration: none;
-  color: inherit;
-}
-
-nav#nav-desktop {
+.navbar#nav-desktop {
   display: none;
 }
 
@@ -180,7 +180,7 @@ header img {
 }
 
 header h1 {
-  margin: 2rem auto 1rem;
+  margin: 2rem 1rem 1rem;
   font-weight: 300;
   font-size: 2.5rem;
 }
@@ -310,11 +310,70 @@ section p {
   line-height: 1.125rem;
 }
 
+footer {
+  padding: 3rem;
+  background-color: #2d314d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .logo {
+  margin-bottom: 2rem;
+}
+
+footer .logo img {
+  height: 1.5rem;
+}
+
+footer .social {
+  margin-bottom: 2rem;
+}
+
+footer .social a + a {
+  margin-left: 0.75rem;
+}
+
+footer .social img {
+  width: 1.75rem;
+  height: auto;
+}
+
+footer nav {
+  margin-bottom: 3rem;
+}
+
+footer nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+footer nav ul li {
+  color: #fafafa;
+}
+
+footer nav ul li + li {
+  margin-top: 1.25rem;
+}
+
+footer #trademark {
+  margin-top: 2rem;
+  color: #9698a6;
+  font-size: 1rem;
+}
+
 @media screen and (min-width: 900px) {
-  nav#nav-mobile {
+  .navbar#nav-mobile {
     display: none;
   }
-  nav#nav-desktop {
+  .navbar#nav-desktop {
     width: 90%;
     max-width: 1200px;
     position: relative;
@@ -323,22 +382,22 @@ section p {
     display: flex;
     margin: auto;
   }
-  nav#nav-desktop ul {
+  .navbar#nav-desktop ul {
     list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  nav#nav-desktop ul li {
+  .navbar#nav-desktop ul li {
     position: relative;
   }
-  nav#nav-desktop ul li::after {
+  .navbar#nav-desktop ul li::after {
     content: '';
     opacity: 0;
     -webkit-transition: all 150ms ease;
     transition: all 150ms ease;
   }
-  nav#nav-desktop ul li:hover::after {
+  .navbar#nav-desktop ul li:hover::after {
     content: '';
     position: absolute;
     top: 3.5rem;
@@ -349,16 +408,15 @@ section p {
     background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
     background: linear-gradient(to right, #31d35c, #2bb7da);
   }
-  nav#nav-desktop ul li a {
-    text-decoration: none;
+  .navbar#nav-desktop ul li a {
     color: #9698a6;
     -webkit-transition: color 150ms ease;
     transition: color 150ms ease;
   }
-  nav#nav-desktop ul li a:hover {
+  .navbar#nav-desktop ul li a:hover {
     color: #2d314d;
   }
-  nav#nav-desktop ul li + li {
+  .navbar#nav-desktop ul li + li {
     margin-left: 1.5rem;
   }
 }

@@ -14,11 +14,16 @@ body {
   color: $color-darkBlue;
 }
 
-nav {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
   width: 100vw;
   position: fixed;
   background-color: $color-white;
-  padding: 1.25rem 1.25rem;
+  padding: 1.25rem;
   justify-content: space-between;
   align-items: center;
   z-index: 3;
@@ -76,7 +81,7 @@ header {
     width: 90%;
   }
   h1 {
-    margin: 2rem auto 1rem;
+    margin: 2rem 1rem 1rem;
     font-weight: $fontWeight-thin;
     font-size: 2.5rem;
   }
@@ -183,8 +188,50 @@ section {
   }
 }
 
-@media screen and (min-width: 900px) {
+footer {
+  padding: 3rem;
+  background-color: $color-darkBlue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .logo {
+    margin-bottom: 2rem;
+    img {
+      height: 1.5rem;
+    }
+  }
+  .social {
+    margin-bottom: 2rem;
+    a + a {
+      margin-left: 0.75rem;
+    }
+    img {
+      width: 1.75rem;
+      height: auto;
+    }
+  }
   nav {
+    margin-bottom: 3rem;
+    ul {
+      list-style: none;
+      text-align: center;
+      li {
+        color: $color-veryLightGray;
+        & + li {
+          margin-top: 1.25rem;
+        }
+      }
+    }
+  }
+  #trademark {
+    margin-top: 2rem;
+    color: $color-grayishBlue;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .navbar {
     &#nav-mobile {display: none;}
     &#nav-desktop {
       width: 90%;
@@ -213,7 +260,6 @@ section {
             background: $gradient-green2blue;
           }
           a {
-            text-decoration: none;
             color: $color-grayishBlue;
             transition: color 150ms ease;
             &:hover {
