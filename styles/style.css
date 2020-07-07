@@ -148,6 +148,7 @@ a {
 
 .container {
   width: 100%;
+  background-color: white;
 }
 
 .button {
@@ -168,6 +169,7 @@ a {
 header {
   padding-bottom: 6rem;
   background-image: url("../images/bg-intro-mobile.svg");
+  background-color: #fafafa;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: contain;
@@ -372,17 +374,34 @@ footer #trademark {
 }
 
 @media screen and (min-width: 900px) {
+  .container {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+  }
+  .wrap {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: unset;
+  }
+  .wrap img {
+    position: relative;
+    top: -7.5rem;
+    right: -9rem;
+    width: 60%;
+    float: right;
+  }
   .navbar#nav-mobile {
     display: none;
   }
   .navbar#nav-desktop {
-    width: 90%;
-    max-width: 1200px;
     position: relative;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: auto;
   }
   .navbar#nav-desktop ul {
     list-style: none;
@@ -421,5 +440,85 @@ footer #trademark {
   .navbar#nav-desktop ul li + li {
     margin-left: 1.5rem;
   }
+  #curtain {
+    display: none;
+  }
+  header {
+    margin-top: 93px;
+    padding: 8rem;
+    background-image: url("../images/bg-intro-desktop.svg");
+    background-position: center right -125%;
+    background-size: 80%;
+    text-align: start;
+  }
+  header .content {
+    width: 50%;
+  }
+  header h1 {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+  }
+  header p {
+    margin: 0;
+    margin-bottom: 2.5rem;
+    font-size: 1.125rem;
+  }
+  section {
+    padding: 6rem 10rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left;
+  }
+  section h2 {
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  section#why .section-header {
+    width: 60%;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-bottom: 4rem;
+  }
+  section#why .section-header p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  section#why .section-content {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+.choices {
+  margin-bottom: 0;
+}
+
+.choices img {
+  margin-bottom: 2rem;
+}
+
+.choices h3 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.choices p {
+  width: 100%;
+  margin: 0;
+  font-size: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
