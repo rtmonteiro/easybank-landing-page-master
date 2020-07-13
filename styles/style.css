@@ -184,11 +184,25 @@ header {
   background-position: top center;
   background-size: contain;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-header img {
+header #img-mock {
   margin-top: -3rem;
   width: 90%;
+}
+
+header #div-mock {
+  display: none;
 }
 
 header .header-text h1 {
@@ -241,6 +255,7 @@ section .section-header {
 
 section .section-content {
   width: 90%;
+  max-width: 1200px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
@@ -440,9 +455,22 @@ footer #trademark {
     background-position: center right -125%;
     background-size: 80%;
     text-align: start;
+    display: block;
   }
-  header img {
+  header #img-mock {
     display: none;
+  }
+  header #div-mock {
+    position: absolute;
+    top: 120px;
+    right: 0;
+    width: 40vw;
+    height: 75%;
+    background-image: url("../images/image-mockups.png");
+    background-position: right center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
   }
   header .header-text {
     width: 50%;
@@ -493,6 +521,7 @@ footer #trademark {
   }
   section .section-content {
     width: 100%;
+    margin: auto;
   }
   section#why .section-header {
     margin-bottom: 4rem;

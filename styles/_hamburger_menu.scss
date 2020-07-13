@@ -1,7 +1,7 @@
 @import 'theme';
 
-$hamburguer-size: 2rem;
-$hamburguer-color: #2D314D;
+$hamburger-size: 2rem;
+$hamburger-color: #2D314D;
 
 @mixin menuToggle {
   display: block;
@@ -14,7 +14,7 @@ $hamburguer-color: #2D314D;
 
   input {
     display: block;
-    width: $hamburguer-size;
+    width: $hamburger-size;
     height: calc(3*(2px + 5px));
     position: absolute; 
   
@@ -44,7 +44,7 @@ $hamburguer-color: #2D314D;
   }
   span {
     display: block;
-    width: $hamburguer-size;
+    width: $hamburger-size;
     height: 2px;
     margin-bottom: 5px;
     position: relative;
