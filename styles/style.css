@@ -17,17 +17,29 @@ a {
   color: inherit;
 }
 
-.container {
+.wrapper {
   width: 95%;
   max-width: 1240px;
   margin: 0 auto;
 }
 
-.container-narrow {
+.wrapper-blue {
+  background-color: #2d314d;
+}
+
+.wrapper-grey {
+  background-color: #9698a6;
+}
+
+.wrapper-white {
+  background-color: #fafafa;
+}
+
+.wrapper-narrow {
   max-width: 960px;
 }
 
-.container-wide {
+.wrapper-wide {
   max-width: 1440px;
 }
 
@@ -390,6 +402,19 @@ footer nav ul li + li {
   margin-top: 1.25rem;
 }
 
+footer .footer-div-1, footer .footer-div-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 footer #trademark {
   margin-top: 2rem;
   color: #9698a6;
@@ -547,6 +572,54 @@ footer #trademark {
     width: 100%;
     margin: 0;
     font-size: 1rem;
+  }
+  footer {
+    padding: 3rem;
+    font-size: 1rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .logo {
+    margin-bottom: 0;
+  }
+  footer .social {
+    margin: 0;
+    margin-top: 2rem;
+  }
+  footer .social a + a {
+    margin-left: 0.75rem;
+  }
+  footer nav {
+    margin-bottom: 0;
+  }
+  footer nav ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    text-align: start;
+  }
+  footer nav ul li + li {
+    margin-top: 0;
+  }
+  footer .footer-div-1 {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  footer .footer-div-3 {
+    -ms-grid-column: 4;
+    grid-column: 4;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 /*# sourceMappingURL=style.css.map */

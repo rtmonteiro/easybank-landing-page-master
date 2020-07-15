@@ -18,16 +18,17 @@
       position: absolute;
       z-index: 2;
       bottom: 0;
+      margin: auto;
       padding: 0.5rem 1rem;
       border-radius: 10px 10px 0 0;
       background-color: white;
       font-size: 11px;
       text-align: center;
     }
-
     .attribution a {
       color: hsl(228, 45%, 44%);
     }
+
     .design {
       position: absolute;
       /* width: 100%; */
@@ -76,7 +77,6 @@
     </ul>
     <a class="button" href="/">Request Invite</a>
   </nav>
-  <div class="header-image"></div>
   <header>
     <img id="img-mock" src="images/image-mockups.png" alt="header background desktop">
     <div id="div-mock"></div>
@@ -187,15 +187,17 @@
   </section>
 
   <footer>
-    <a class="logo" href="/"><img src="images/logo-white.svg" alt="easybank logo"></a>
-    <div class="social">
-      <a href="/"><img src="images/icon-facebook.svg" alt="facebook page link"></a>
-      <a href="/"><img src="images/icon-youtube.svg" alt="youtube page link"></a>
-      <a href="/"><img src="images/icon-twitter.svg" alt="twitter page link"></a>
-      <a href="/"><img src="images/icon-pinterest.svg" alt="pinterest page link"></a>
-      <a href="/"><img src="images/icon-instagram.svg" alt="instagram page link"></a>
+    <div class="footer-div-1">
+      <a class="logo" href="/"><img src="images/logo-white.svg" alt="easybank logo"></a>
+      <div class="social">
+        <a href="/"><img src="images/icon-facebook.svg" alt="facebook page link"></a>
+        <a href="/"><img src="images/icon-youtube.svg" alt="youtube page link"></a>
+        <a href="/"><img src="images/icon-twitter.svg" alt="twitter page link"></a>
+        <a href="/"><img src="images/icon-pinterest.svg" alt="pinterest page link"></a>
+        <a href="/"><img src="images/icon-instagram.svg" alt="instagram page link"></a>
+      </div>
     </div>
-    <nav>
+    <nav class="footer-div-2">
       <ul>
         <li><a href="/">About Us</a></li>
         <li><a href="/">Contact</a></li>
@@ -205,8 +207,10 @@
         <li><a href="/">Privacy Policy</a></li>
       </ul>
     </nav>
-    <a href="/" class="button">Request Invite</a>
-    <p id="trademark">© Easybank. All Rights Reserved</p>
+    <div class="footer-div-3">
+      <a href="/" class="button">Request Invite</a>
+      <p id="trademark">© Easybank. All Rights Reserved</p>
+    </div>
     <div class="attribution">
       Coded with ❤ by <a href="https://github.com/rtmonteiro/">Ryan Monteiro</a>.
       <br>
