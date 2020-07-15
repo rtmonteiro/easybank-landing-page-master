@@ -146,7 +146,7 @@ section {
     background-color: $color-veryLightGray;
   }
   .section-header {
-    width: 80%;
+    width: 95%;
   }
   .section-content {
     width: 90%;
@@ -253,6 +253,7 @@ footer {
       text-align: center;
       li {
         color: $color-veryLightGray;
+        transition: color 150ms ease;
         & + li {
           margin-top: 1.25rem;
         }

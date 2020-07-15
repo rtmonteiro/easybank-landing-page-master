@@ -261,7 +261,7 @@ section#blog {
 }
 
 section .section-header {
-  width: 80%;
+  width: 95%;
 }
 
 section .section-content {
@@ -394,6 +394,8 @@ footer nav ul {
 
 footer nav ul li {
   color: #fafafa;
+  -webkit-transition: color 150ms ease;
+  transition: color 150ms ease;
 }
 
 footer nav ul li + li {
