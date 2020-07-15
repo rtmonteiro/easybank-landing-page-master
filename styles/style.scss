@@ -19,19 +19,26 @@ a {
   color: inherit;
 }
 
-.wrapper {
-  width: 95%;
-  max-width: 1240px;
-  margin: 0 auto;
+.container {
+  width: 100%;
   &-blue{
+    @extend .container;
     background-color: $color-darkBlue;
   }
   &-grey{
-    background-color: $color-grayishBlue;
+    @extend .container;
+    background-color: $color-lightGrayishBlue;
   }
   &-white{
+    @extend .container;
     background-color: $color-veryLightGray;
   }
+}
+
+.wrapper {
+  width: 95%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .wrapper-narrow {
   max-width: 960px;
@@ -39,8 +46,6 @@ a {
 .wrapper-wide {
   max-width: 1440px;
 }
-
-
 
 .navbar {
   position: fixed;
@@ -319,23 +324,31 @@ footer {
   #curtain {
     display: none;
   }
-  header {
-    padding: 8rem;
+  
+  .mockup-background {
+    background-color: $color-veryLightGray;
     background: {
       image: url('../images/bg-intro-desktop.svg');
       position: center right -125%;
+      repeat: no-repeat;
       size: 80%;
     }
+  }
+
+  header {
+    position: relative;
+    padding: 8rem;
+    background: none;
     text-align: start;
     display: block;
 
     #img-mock {display: none;}
     #div-mock {
       position: absolute;
-      top: 120px;
+      top: 10px;
       right: 0;
       width: 40vw;
-      height: 75%;
+      height: 120%;
       background: {
         image: url("../images/image-mockups.png");
         position: right center;
@@ -356,19 +369,6 @@ footer {
         margin-bottom: 2.5rem;
         font-size: 1.125rem;
       }
-    }
-  }
-
-  .header-image {
-    position: absolute;
-    right: 0;
-    width: 400px;
-    height: auto;
-    background: {
-      image: url('../images/image-mockups.png');
-      position: center right;
-      size: contain;
-      repeat: no-repeat;
     }
   }
   

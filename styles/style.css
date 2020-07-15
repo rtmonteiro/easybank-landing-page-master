@@ -17,22 +17,26 @@ a {
   color: inherit;
 }
 
-.wrapper {
-  width: 95%;
-  max-width: 1240px;
-  margin: 0 auto;
+.container, .container-blue, .container-grey, .container-white {
+  width: 100%;
 }
 
-.wrapper-blue {
+.container-blue {
   background-color: #2d314d;
 }
 
-.wrapper-grey {
-  background-color: #9698a6;
+.container-grey {
+  background-color: #f3f4f6;
 }
 
-.wrapper-white {
+.container-white {
   background-color: #fafafa;
+}
+
+.wrapper {
+  width: 95%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .wrapper-narrow {
@@ -474,11 +478,17 @@ footer #trademark {
   #curtain {
     display: none;
   }
-  header {
-    padding: 8rem;
+  .mockup-background {
+    background-color: #fafafa;
     background-image: url("../images/bg-intro-desktop.svg");
     background-position: center right -125%;
+    background-repeat: no-repeat;
     background-size: 80%;
+  }
+  header {
+    position: relative;
+    padding: 8rem;
+    background: none;
     text-align: start;
     display: block;
   }
@@ -487,10 +497,10 @@ footer #trademark {
   }
   header #div-mock {
     position: absolute;
-    top: 120px;
+    top: 10px;
     right: 0;
     width: 40vw;
-    height: 75%;
+    height: 120%;
     background-image: url("../images/image-mockups.png");
     background-position: right center;
     background-size: contain;
@@ -509,16 +519,6 @@ footer #trademark {
     margin: 0;
     margin-bottom: 2.5rem;
     font-size: 1.125rem;
-  }
-  .header-image {
-    position: absolute;
-    right: 0;
-    width: 400px;
-    height: auto;
-    background-image: url("../images/image-mockups.png");
-    background-position: center right;
-    background-size: contain;
-    background-repeat: no-repeat;
   }
   section {
     padding: 6rem 10rem;
