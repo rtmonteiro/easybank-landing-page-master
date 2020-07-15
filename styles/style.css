@@ -34,17 +34,12 @@ a {
 }
 
 .wrapper {
-  width: 95%;
   max-width: 1440px;
   margin: 0 auto;
 }
 
 .wrapper-narrow {
-  max-width: 960px;
-}
-
-.wrapper-wide {
-  max-width: 1440px;
+  max-width: 1150px;
 }
 
 .navbar {
@@ -354,7 +349,6 @@ section p {
 footer {
   position: relative;
   padding: 3rem;
-  padding-bottom: 5rem;
   background-color: #2d314d;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -404,6 +398,10 @@ footer nav ul li {
 
 footer nav ul li + li {
   margin-top: 1.25rem;
+}
+
+footer nav ul li:hover {
+  color: #31d35c;
 }
 
 footer .footer-div-1, footer .footer-div-3 {
@@ -574,7 +572,7 @@ footer #trademark {
     font-size: 1rem;
   }
   footer {
-    padding: 3rem;
+    padding: 3rem 0;
     font-size: 1rem;
     display: -ms-grid;
     display: grid;
@@ -603,7 +601,7 @@ footer #trademark {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 1rem 0.5rem;
     text-align: start;
   }
   footer nav ul li + li {
