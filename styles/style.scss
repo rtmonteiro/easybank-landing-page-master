@@ -468,3 +468,25 @@ footer {
   }
 }
 
+
+// small transitions added 
+.article{
+  transition:all .4s;
+}
+
+.article:hover{
+  transform: scale(1.1) translateZ(10px);
+}
+
+/* .article:hover #imghov {
+  transform: scale(.9); 
+  filter: blur(3px) brightness(80%);
+} 
+*/
+
+
+
+.imghov{
+  transition: all .4s;
+}
+
